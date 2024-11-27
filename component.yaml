@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: component-js
+  description: Un componente de ejemplo ejecutado en Docker y gestionado con Backstage.
+  annotations:
+    backstage.io/techdocs-ref: url:http://localhost:3001 # Si tienes documentación (puedes cambiarla más tarde).
+spec:
+  type: service
+  lifecycle: experimental
+  owner: equipo-backstage

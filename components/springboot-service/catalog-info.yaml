@@ -4,8 +4,8 @@ metadata:
   name: springboot-service
   description: Servicio desarrollado con Spring Boot que implementa las funcionalidades del sistema.
   annotations:
-    github.com/project-slug: tu-usuario/tu-repositorio
-    backstage.io/techdocs-ref: url:https://github.com/tu-usuario/tu-repositorio/docs
+    github.com/project-slug: maubmz/Backstage-Demo
+    # backstage.io/techdocs-ref: url:https://github.com/tu-usuario/tu-repositorio/docs
 spec:
   type: service
   lifecycle: production

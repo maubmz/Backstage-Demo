@@ -7,9 +7,8 @@ spec:
   type: team
   profile:
     displayName: Team Ejemplo
-    email: team-ejemplo@tuempresa.com
+    email: users@example.com
   members:
     - usuario1
     - usuario2
-    - usuario3
   parent: group:default/organizacion-ejemplo

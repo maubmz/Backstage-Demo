@@ -4,7 +4,7 @@ metadata:
   name: group-location
 spec:
   type: url
-  target: https://github.com/tu-usuario/tu-repositorio/groups/team-ejemplo/catalog-info.yaml
+  target: https://github.com/maubmz/Backstage-Demo/blob/group/groups/team-ejemplo/catalog-info.yaml
 
 ---
 
@@ -14,7 +14,7 @@ metadata:
   name: api-location
 spec:
   type: url
-  target: https://github.com/tu-usuario/tu-repositorio/apis/springboot-api/catalog-info.yaml
+  target: https://github.com/maubmz/Backstage-Demo/blob/group/apis/springboot-api/catalog-info.yaml
 
 ---
 
@@ -24,7 +24,7 @@ metadata:
   name: system-location
 spec:
   type: url
-  target: https://github.com/tu-usuario/tu-repositorio/systems/sistema-ejemplo/catalog-info.yaml
+  target: https://github.com/maubmz/Backstage-Demo/blob/group/systems/sistema-ejemplo/catalog-info.yaml
 
 ---
 
@@ -34,4 +34,4 @@ metadata:
   name: component-location
 spec:
   type: url
-  target: https://github.com/tu-usuario/tu-repositorio/components/springboot-service/catalog-info.yaml
+  target: https://github.com/maubmz/Backstage-Demo/blob/group/components/springboot-service/catalog-info.yaml

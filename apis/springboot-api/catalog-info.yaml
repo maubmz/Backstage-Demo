@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: springboot-api
+  description: API RESTful desarrollada con Spring Boot para gestionar operaciones del sistema.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/team-ejemplo

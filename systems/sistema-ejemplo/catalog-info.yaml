@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: sistema-ejemplo
+  description: Sistema que agrupa los servicios relacionados con la API Spring Boot.
+spec:
+  owner: group:default/team-ejemplo
+  domain: servicios-backend

@@ -1,15 +1,37 @@
 apiVersion: backstage.io/v1alpha1
-kind: Group
+kind: Location
 metadata:
-  name: team-ejemplo
-  description: Equipo responsable de desarrollar y mantener servicios relacionados con la API Spring Boot.
+  name: group-location
 spec:
-  type: team
-  profile:
-    displayName: Team Ejemplo
-    email: team-ejemplo@tuempresa.com
-  members:
-    - usuario1
-    - usuario2
-    - usuario3
-  parent: group:default/organizacion-ejemplo
+  type: url
+  target: https://github.com/tu-usuario/tu-repositorio/groups/team-ejemplo/catalog-info.yaml
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: api-location
+spec:
+  type: url
+  target: https://github.com/tu-usuario/tu-repositorio/apis/springboot-api/catalog-info.yaml
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: system-location
+spec:
+  type: url
+  target: https://github.com/tu-usuario/tu-repositorio/systems/sistema-ejemplo/catalog-info.yaml
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: component-location
+spec:
+  type: url
+  target: https://github.com/tu-usuario/tu-repositorio/components/springboot-service/catalog-info.yaml

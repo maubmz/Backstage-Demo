@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-ejemplo
+  description: Equipo responsable de desarrollar y mantener servicios relacionados con la API Spring Boot.
+spec:
+  type: team
+  profile:
+    displayName: Team Ejemplo
+    email: team-ejemplo@tuempresa.com
+  members:
+    - usuario1
+    - usuario2
+    - usuario3
+  parent: group:default/organizacion-ejemplo

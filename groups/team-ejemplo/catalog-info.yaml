@@ -12,3 +12,4 @@ spec:
     - usuario1
     - usuario2
   parent: group:default/organizacion-ejemplo
+  children: []

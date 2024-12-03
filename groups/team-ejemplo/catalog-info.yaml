@@ -5,11 +5,4 @@ metadata:
   description: Equipo responsable de desarrollar y mantener servicios relacionados con la API Spring Boot.
 spec:
   type: team
-  profile:
-    displayName: Team Ejemplo
-    email: users@example.com
-  members:
-    - usuario1
-    - usuario2
-  parent: group:default/organizacion-ejemplo
-  children: []
+  children: []  # Asegúrate de que esté vacío o con datos si tienes subgrupos

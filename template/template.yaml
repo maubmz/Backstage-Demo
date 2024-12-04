@@ -1,0 +1,40 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: create-node-app
+  title: Create Node.js App
+  description: Template to bootstrap a Node.js application
+  tags:
+    - javascript
+    - node
+spec:
+  owner: team-example
+  type: service
+  parameters:
+    - title: Basic Information
+      required:
+        - name
+      properties:
+        name:
+          title: Project Name
+          type: string
+          description: The name of the project
+  steps:
+    - id: fetch
+      name: Fetch base template
+      action: fetch:template
+      input:
+        url: https://github.com/example-org/node-template
+        values:
+          name: ${{ parameters.name }}
+    - id: publish
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        repoUrl: github.com/example-org/${{ parameters.name }}
+        defaultBranch: main
+        description: This is your new Node.js app
+  output:
+    links:
+      - title: Repository
+        url: ${{ steps.publish.output.repositoryUrl }}

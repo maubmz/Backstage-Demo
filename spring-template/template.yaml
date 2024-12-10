@@ -5,6 +5,7 @@ metadata:
   title: Spring Boot App
   description: Template para crear un proyecto básico de Spring Boot.
 spec:
+  type: template
   parameters:
     - title: Project Details
       required:

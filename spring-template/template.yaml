@@ -1,0 +1,54 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: spring-boot-app
+  title: Spring Boot App
+  description: Template para crear un proyecto básico de Spring Boot.
+spec:
+  parameters:
+    - title: Project Details
+      required:
+        - name
+        - packageName
+      properties:
+        name:
+          title: Project name
+          type: string
+        packageName:
+          title: Base package name
+          type: string
+          default: com.example.demo
+  steps:
+    - id: fetch
+      name: Fetch Template
+      action: fetch:template
+      input:
+        url: ./template
+    - id: replace-package
+      name: Replace Package and Project Name
+      action: transform:replace
+      input:
+        target:
+          path: './**/*'
+        patterns:
+          - from: 'com.example.demo'
+            to: ${{ parameters.packageName }}
+          - from: 'DemoApplication'
+            to: ${{ parameters.name | capitalize }}Application
+    - id: update-pom
+      name: Update Maven Coordinates
+      action: transform:replace
+      input:
+        target:
+          path: './pom.xml'
+        patterns:
+          - from: '<groupId>com.example.demo</groupId>'
+            to: '<groupId>${{ parameters.packageName }}</groupId>'
+          - from: '<artifactId>demo</artifactId>'
+            to: '<artifactId>${{ parameters.name }}</artifactId>'
+    - id: initialize-repo
+      name: Initialize Git Repository
+      action: git:init
+  output:
+    projectName: ${{ parameters.name }}
+    packageName: ${{ parameters.packageName }}

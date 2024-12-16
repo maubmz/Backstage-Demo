@@ -32,7 +32,7 @@ spec:
         target:
           path: './**/*'
         patterns:
-          - from: 'com.example.demo'
+          - from: 'com\\.example\\.demo'
             to: ${{ parameters.packageName }}
           - from: 'DemoApplication'
             to: ${{ parameters.name | capitalize }}Application

@@ -5,12 +5,4 @@ nav:
 
 docs_dir: docs
 
-theme:
-  name: material
 
-plugins:
-  - search
-
-markdown_extensions:
-  - admonition
-  - toc

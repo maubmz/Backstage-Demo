@@ -17,6 +17,6 @@ Este servicio ha sido desarrollado utilizando el framework **Spring Boot** y pro
 
 ## Recursos importantes
 
-- [Repositorio del proyecto en GitHub](https://github.com/maubmz/Backstage-Demo).
-- [TechDocs sobre Backstage](https://backstage.io/docs/features/techdocs/overview).
+- [Repositorio del proyecto en GitHub](https://github.com/maubmz/Backstage-Demo/tree/group).
+- [Backstage Docs](https://backstage.io/docs/overview/what-is-backstage).
 

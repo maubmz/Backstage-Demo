@@ -1,0 +1,16 @@
+site_name: Spring Boot Service Documentation
+nav:
+  - Inicio: index.md
+  - API: api.md
+
+docs_dir: docs
+
+theme:
+  name: material
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc

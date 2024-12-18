@@ -3,6 +3,6 @@ nav:
   - Inicio: index.md
   - API: api.md
 
-docs_dir: docs
+# docs_dir: docs
 
 

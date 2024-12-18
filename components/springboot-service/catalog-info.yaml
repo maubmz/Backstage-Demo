@@ -5,7 +5,7 @@ metadata:
   description: Servicio desarrollado con Spring Boot que implementa las funcionalidades del sistema.
   annotations:
     github.com/project-slug: maubmz/Backstage-Demo
-    # backstage.io/techdocs-ref: url:https://github.com/tu-usuario/tu-repositorio/docs
+    techdocs.io/metadata-storage-type: 'dir'
 spec:
   type: service
   lifecycle: production
@@ -13,3 +13,7 @@ spec:
   system: sistema-ejemplo
   providesApis:
     - springboot-api
+  techdocs:
+    spec:
+      type: 'dir'
+      path: './docs'

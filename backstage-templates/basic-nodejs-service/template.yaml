@@ -35,7 +35,7 @@ spec:
       name: Crear el proyecto
       action: fetch:plain
       input:
-        url: 'https://github.com/tu_usuario/nodejs-template-repo'
+        url: 'https://github.com/maubmz/Backstage-Demo/tree/App1/backstage-templates/basic-nodejs-service'
         targetPath: '.'
     - id: customize
       name: Personalizar configuración

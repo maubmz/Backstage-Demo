@@ -10,7 +10,7 @@ metadata:
     - express
     - template
 spec:
-  owner: engineering-team
+  owner: engineering-team-test
   type: service
   parameters:
     - title: Configuración del Servicio

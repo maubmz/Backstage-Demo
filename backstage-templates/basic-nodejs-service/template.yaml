@@ -1,0 +1,57 @@
+# Template para generar un servicio Node.js básico
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: basic-nodejs-service
+  title: Node.js Service Template
+  description: Template para generar un servicio REST básico con Node.js y Express.
+  tags:
+    - nodejs
+    - express
+    - template
+spec:
+  owner: engineering-team
+  type: service
+  parameters:
+    - title: Configuración del Servicio
+      required:
+        - name
+      properties:
+        name:
+          title: Nombre del Servicio
+          description: Nombre del nuevo servicio
+          type: string
+    - title: Configuración del Puerto
+      required:
+        - port
+      properties:
+        port:
+          title: Puerto del Servicio
+          description: Especifica el puerto donde escuchará el servicio
+          type: number
+          default: 4000
+  steps:
+    - id: fetch
+      name: Crear el proyecto
+      action: fetch:plain
+      input:
+        url: 'https://github.com/tu_usuario/nodejs-template-repo'
+        targetPath: '.'
+    - id: customize
+      name: Personalizar configuración
+      action: transform:replace
+      input:
+        files:
+          - package.json
+          - src/index.js
+        replacements:
+          - token: 'SERVICE_NAME'
+            value: '{{parameters.name}}'
+          - token: 'SERVICE_PORT'
+            value: '{{parameters.port}}'
+  output:
+    links:
+      - title: "Repositorio del Proyecto"
+        url: "{{steps.publish.output.repositoryUrl}}"
+      - title: "Documentación"
+        url: "/docs/{{parameters.name}}"

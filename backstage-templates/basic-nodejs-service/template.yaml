@@ -30,6 +30,7 @@ spec:
           description: Especifica el puerto donde escuchará el servicio
           type: number
           default: 4000
+  # Parte que investigar
   steps:
     - id: fetch
       name: Crear el proyecto

@@ -10,7 +10,7 @@ metadata:
     - express
     - template
 spec:
-  owner: engineering-team-test
+  owner: engineering-team-test-node
   type: service
   parameters:
     - title: Configuración del Servicio
@@ -38,18 +38,15 @@ spec:
       input:
         url: 'https://github.com/maubmz/Backstage-Demo/tree/App1/backstage-templates/basic-nodejs-service'
         targetPath: '.'
-    - id: customize
-      name: Personalizar configuración
-      action: transform:replace
+    - id: fetch
+      name: Crear el proyecto
+      action: fetch:template
       input:
-        files:
-          - package.json
-          - src/index.js
-        replacements:
-          - token: 'SERVICE_NAME'
-            value: '{{parameters.name}}'
-          - token: 'SERVICE_PORT'
-            value: '{{parameters.port}}'
+        url: 'https://github.com/maubmz/Backstage-Demo/tree/App1/backstage-templates/basic-nodejs-service'
+        targetPath: '.'
+        values:
+          name: '{{parameters.name}}'
+          port: '{{parameters.port}}'      
   output:
     links:
       - title: "Repositorio del Proyecto"
